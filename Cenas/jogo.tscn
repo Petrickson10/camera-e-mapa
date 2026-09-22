@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ddnyduc6ecsoj" path="res://Arte/tilemap_packed.png" id="1_5n27r"]
 [ext_resource type="PackedScene" uid="uid://rcq887mnwhyt" path="res://Cenas/player.tscn" id="2_03mvh"]
+[ext_resource type="PackedScene" uid="uid://badcojwilc4am" path="res://Cenas/alvo.tscn" id="3_45s2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03mvh"]
 texture = ExtResource("1_5n27r")
@@ -949,6 +950,9 @@ physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ovbra")
 
+[sub_resource type="LabelSettings" id="LabelSettings_6dmbp"]
+font_size = 10
+
 [node name="Jogo" type="Node2D" unique_id=803096791]
 
 [node name="Mundo" type="Node2D" parent="." unique_id=78427800]
@@ -966,8 +970,19 @@ tile_map_data = PackedByteArray("AAADABEAAAAFAAkAAAADAA8AAAAGAAUAAAAFAA8AAAAFAAY
 tile_set = SubResource("TileSet_o7irj")
 
 [node name="Decoracao2" type="TileMapLayer" parent="Mundo" unique_id=667530664]
-tile_map_data = PackedByteArray("AAADAAsAAAAFAAYAAAAIAAwAAAAFAAgAAAAJAAoAAAAGAAUAAGAHAAcAAAAFAAcAADABAAgAAAAGAAgAAFAYAAMAAAAJAAMAAAAlAAwAAAAFAAcAAFAaABAAAAAFAAYAADAEABAAAAAQAAIAAAA=")
+tile_map_data = PackedByteArray("AAADAAsAAAAFAAYAAAAIAAwAAAAFAAgAAAAJAAoAAAAGAAUAAGAHAAcAAAAFAAcAADABAAgAAAAGAAgAAFAYAAMAAAAJAAMAAAAlAAwAAAAFAAcAAFAaABAAAAAFAAYAADA=")
 tile_set = SubResource("TileSet_xixvn")
 
 [node name="Player" parent="Mundo" unique_id=1412914976 instance=ExtResource("2_03mvh")]
 position = Vector2(7, 56)
+
+[node name="Alvo" parent="Mundo" unique_id=805192779 instance=ExtResource("3_45s2r")]
+position = Vector2(43, 267)
+
+[node name="Tutorial" type="Label" parent="." unique_id=169674141]
+offset_left = 19.0
+offset_top = 67.0
+offset_right = 176.0
+offset_bottom = 90.0
+text = "Encontre a Bandeira"
+label_settings = SubResource("LabelSettings_6dmbp")
