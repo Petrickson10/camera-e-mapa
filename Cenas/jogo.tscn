@@ -955,6 +955,12 @@ font_size = 10
 
 [node name="Jogo" type="Node2D" unique_id=803096791]
 
+[node name="Player" parent="." unique_id=1412914976 instance=ExtResource("2_03mvh")]
+position = Vector2(7, 56)
+
+[node name="Alvo" parent="." unique_id=805192779 instance=ExtResource("3_45s2r")]
+position = Vector2(43, 267)
+
 [node name="Mundo" type="Node2D" parent="." unique_id=78427800]
 
 [node name="Chao" type="TileMapLayer" parent="Mundo" unique_id=1052732710]
@@ -972,12 +978,6 @@ tile_set = SubResource("TileSet_o7irj")
 [node name="Decoracao2" type="TileMapLayer" parent="Mundo" unique_id=667530664]
 tile_map_data = PackedByteArray("AAADAAsAAAAFAAYAAAAIAAwAAAAFAAgAAAAJAAoAAAAGAAUAAGAHAAcAAAAFAAcAADABAAgAAAAGAAgAAFAYAAMAAAAJAAMAAAAlAAwAAAAFAAcAAFAaABAAAAAFAAYAADA=")
 tile_set = SubResource("TileSet_xixvn")
-
-[node name="Player" parent="Mundo" unique_id=1412914976 instance=ExtResource("2_03mvh")]
-position = Vector2(7, 56)
-
-[node name="Alvo" parent="Mundo" unique_id=805192779 instance=ExtResource("3_45s2r")]
-position = Vector2(43, 267)
 
 [node name="Tutorial" type="Label" parent="." unique_id=169674141]
 offset_left = 19.0

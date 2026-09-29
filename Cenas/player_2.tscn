@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bkb6nivn34jsc"]
+
+[ext_resource type="Texture2D" uid="uid://unl2omy3rwj6" path="res://Arte/Farmer.png" id="1_r322i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45ong"]
+atlas = ExtResource("1_r322i")
+region = Rect2(16, 144, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apop0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45ong")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player2" type="CharacterBody2D" unique_id=2059317276]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=820127023]
+polygon = PackedVector2Array(7, 8, 7, 7, 8, 7, 8, 3, 7, 3, 7, 2, 6, 2, 6, 0, 7, 0, 7, -1, 8, -1, 8, -5, 7, -5, 7, -6, 5, -6, 5, -7, 4, -7, 4, -8, -4, -8, -4, -7, -5, -7, -5, -6, -7, -6, -7, -5, -8, -5, -8, -1, -7, -1, -7, 0, -6, 0, -6, 2, -7, 2, -7, 3, -8, 3, -8, 7, -7, 7, -7, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=827010707]
+sprite_frames = SubResource("SpriteFrames_apop0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=732011317]
