@@ -955,12 +955,6 @@ font_size = 10
 
 [node name="Jogo" type="Node2D" unique_id=803096791]
 
-[node name="Player" parent="." unique_id=1412914976 instance=ExtResource("2_03mvh")]
-position = Vector2(7, 56)
-
-[node name="Alvo" parent="." unique_id=805192779 instance=ExtResource("3_45s2r")]
-position = Vector2(43, 267)
-
 [node name="Mundo" type="Node2D" parent="." unique_id=78427800]
 
 [node name="Chao" type="TileMapLayer" parent="Mundo" unique_id=1052732710]
@@ -986,3 +980,9 @@ offset_right = 176.0
 offset_bottom = 90.0
 text = "Encontre a Bandeira"
 label_settings = SubResource("LabelSettings_6dmbp")
+
+[node name="Player" parent="." unique_id=1412914976 instance=ExtResource("2_03mvh")]
+position = Vector2(7, 56)
+
+[node name="Alvo" parent="." unique_id=805192779 instance=ExtResource("3_45s2r")]
+position = Vector2(43, 267)
